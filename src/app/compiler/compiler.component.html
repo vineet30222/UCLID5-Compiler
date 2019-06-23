@@ -1,0 +1,46 @@
+<nav class="navbar navbar-expand-md mod-color mb-5">
+  <div class="container p-3">
+    <h1 class="m-auto text-primary">Welcome to UCLID5 Compiler</h1>
+  </div>
+</nav>
+<section>
+    <div class="container mb-5">
+        <div class="input-group">
+            <div class="input-group-prepend">
+              <span (click)="compileFile()" class="input-group-text btn" id="fileAddOne">Upload</span>
+            </div>
+            <div class="custom-file">
+              <input accept=".ucl" type="file" class="custom-file-input" id="inputGroupFile01"
+                aria-describedby="fileAddOne" (change)="fileUpload($event)" >
+              <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+            </div>
+          </div>
+    </div>
+    <div class="container mb-2">
+        <select class="browser-default custom-select col-md-3" name="size" [(ngModel)]="size">
+            <option value="large">Large</option>
+            <option selected value="medium">Medium</option>
+            <option value="small">Small</option>
+        </select>
+        <select class="browser-default custom-select mr-auto col-md-3" name="background" [(ngModel)]="background">
+            <option selected value="white">White</option>
+            <option value="black">Black</option>
+            <option value="grey">Grey</option>
+        </select>
+
+    </div>
+    <div class="container mb-5">
+        <div class="md-form">
+            <textarea spellcheck="false" class="form-control md-textarea p-3 {{size}} {{background}}" length="120" rows="25" name="code" [(ngModel)]="code"
+            (keydown.tab)="TabOn($event)"></textarea>
+        </div>
+        <button class="btn btn-info mt-3" (click)="compile()">Compile</button>
+    </div>
+    <div class="container" *ngIf="output">
+      <div>
+        <textarea spellcheck="false" readonly class="form-control md-textarea mb-5 output p-3" length="120" rows="10">
+            {{output}}
+        </textarea>
+      </div>
+    </div>
+</section>

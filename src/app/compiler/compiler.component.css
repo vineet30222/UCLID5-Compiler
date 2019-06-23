@@ -1,0 +1,38 @@
+.mod-color{
+    background-color: rgb(236, 235, 235);
+}
+textarea {  
+    overflow-x: hidden; 
+    overflow-y: scroll; 
+} 
+textarea::-webkit-scrollbar { 
+    display: none; 
+}
+
+.output {
+    background-color: rgb(236, 235, 235);
+    color: rgb(248, 107, 97);
+    font-size: 20px;
+}
+
+.large {
+    font-size: 25px;
+}
+.medium {
+    font-size: 20px;
+}
+.small {
+    font-size: 17px;
+}
+.white {
+    background-color: white;
+    color: black;
+}
+.black {
+    background-color: black;
+    color: white;
+}
+.grey {
+    background-color: rgb(236, 235, 235);
+    color: black;
+}
