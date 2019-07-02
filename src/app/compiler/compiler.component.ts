@@ -11,7 +11,7 @@ import bsCustomFileInput from 'bs-custom-file-input';
 })
 export class CompilerComponent implements OnInit {
 
-  baseURL = 'http://19c46333.ngrok.io';
+  baseURL = 'http://localhost:1818';
   output = "";
   size = "medium";
   background = "white";
