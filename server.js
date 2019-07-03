@@ -8,7 +8,7 @@ Execute = require('./src/backend/ExecuteFile');
 
 
 app.use(function (req, res, next) {
-  res.header("Access-Control-Allow-Origin", "*");
+  res.header('Access-Control-Allow-Origin', 'http://localhost:4200');
   res.setHeader('Access-Control-Allow-Methods', 'POST');
   res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
   res.setHeader('Access-Control-Allow-Credentials', true);
@@ -22,8 +22,6 @@ app.use(bodyparser.urlencoded({ extended: false }));
 
 //Compile code
 app.post('/compile', function (req, res, err) {
-  res.header("Access-Control-Allow-Origin", "*");
-  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   var data = req.body;
   Execute.executeFile(res, data);
 });
