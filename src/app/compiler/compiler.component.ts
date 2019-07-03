@@ -16,6 +16,8 @@ export class CompilerComponent implements OnInit {
   size = "medium";
   background = "white";
   code = "";
+  uploadSpinner: boolean = false;
+  compileSpinner: boolean = false;
   private fileText;
 
 
@@ -31,8 +33,10 @@ export class CompilerComponent implements OnInit {
   }
 
   compile() {
+    this.compileSpinner = true;
     this._http.post(this.baseURL+'/compile',{Code:this.code, FileName: "uclid" + Date.now() + ".ucl"}).subscribe(result => {
       this.output = result._body;
+      this.compileSpinner = false;
     });
   }
 
@@ -47,10 +51,13 @@ export class CompilerComponent implements OnInit {
   }
 
   compileFile(){
-    if(this.fileText === undefined)
-    return ;
+    this.uploadSpinner = true;
+    if(this.fileText === undefined){
+       this.uploadSpinner=false;
+    return ;}
     this._http.post(this.baseURL+'/compile', {Code:this.fileText, FileName: "upload" + Date.now() + ".ucl"}).subscribe(result => {
       this.output = result._body;
+      this.uploadSpinner = false;
     });
   }
 }
