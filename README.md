@@ -11,9 +11,9 @@ This project uses the Node as the Backend.
 2.The system should also have Angular installed in it.You can install after installing node , by using the command` npm install -g @angular/cli`. 
 If needed add the path inside the path variable in the environmental varible.
 
-3. System shoula have Uclid5 in it , and the bin path should be in the path variable of the enviornmnetal variable.
+3. System should have Uclid5 in it , and the bin path should be in the path variable of the enviornmnetal variable.
 
-4. Syastem should also have z3 smt solver installed it it, and also path of bin should be added in the path variable of the enviornmnetal variable.
+4. System should also have z3 smt solver installed it it, and also path of bin should be added in the path variable of the enviornmnetal variable.
 
 
 ## Build
