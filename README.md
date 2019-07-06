@@ -8,8 +8,12 @@ This project uses the Node as the Backend.
 ## Requisite
 1. The system should have Node.js installed in the system , you can download it https://nodejs.org/en/download/ and add the nodejs as the enviornmental variable , by adding the path under the PATH variable
 
-2.
+2.The system should also have Angular installed in it.You can install after installing node , by using the command` npm install -g @angular/cli`. 
+If needed add the path inside the path variable in the environmental varible.
 
+3. System shoula have Uclid5 in it , and the bin path should be in the path variable of the enviornmnetal variable.
+
+4. Syastem should also have z3 smt solver installed it it, and also path of bin should be added in the path variable of the enviornmnetal variable.
 
 
 ## Build
